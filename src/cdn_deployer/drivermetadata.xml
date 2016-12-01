@@ -1,0 +1,7 @@
+<Driver Description="Describe the purpose of your CloudShell shell" MainClass="driver.CloudshellAzureRedisCacheDriver" Name="CloudshellAzureRedisCacheDriver" Version="1.0.0">
+    <Layout>
+        <Category Name="Hidden Commands">
+            <Command Description="..." Name="deploy" />
+        </Category>
+    </Layout>
+</Driver>
