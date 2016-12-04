@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from azure.mgmt.resource.resources import ResourceManagementClient
 from azure.common.credentials import ServicePrincipalCredentials
+import test_constants as c
 from uuid import uuid4
 """
 Tests for `CloudshellAzureCdnDeployerDriver`
@@ -13,11 +14,11 @@ from driver import CloudshellAzureCdnDeployerDriver
 
 def mock_get_azure_attributes(context):
     azure_attributes = dict()
-    azure_attributes['Azure Subscription ID'] = 'c56b164a-5995-47a2-b8ce-178b0e32534a'
-    azure_attributes['Azure Client ID'] = '94520553-7db6-493a-af0f-354733db64b2'
-    azure_attributes['Azure Secret'] = 'FSz64yvfyQ8gYL//yla0aYbBFmaX8ESdI/f4PNHhnTs='
-    azure_attributes['Azure Tenant'] = '399d58c0-d633-4267-970a-4dce5a359079'
-    azure_attributes['Region'] = 'westus'
+    azure_attributes['Azure Subscription ID'] = c.SUBSCRIPTION_ID
+    azure_attributes['Azure Client ID'] = c.CLIENT_ID
+    azure_attributes['Azure Secret'] = c.SECRET
+    azure_attributes['Azure Tenant'] = c.TENANT
+    azure_attributes['Region'] = c.REGION
     return azure_attributes
 
 
