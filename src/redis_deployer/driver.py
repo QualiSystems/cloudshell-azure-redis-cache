@@ -1,9 +1,8 @@
 from cloudshell.api.cloudshell_api import CloudShellAPISession
 from cloudshell.shell.core.resource_driver_interface import ResourceDriverInterface
-from cloudshell.shell.core.driver_context import InitCommandContext, ResourceCommandContext, AutoLoadCommandContext, \
-    AutoLoadAttribute, AutoLoadResource, AutoLoadDetails
+from cloudshell.shell.core.driver_context import InitCommandContext, ResourceCommandContext
 from azure.mgmt.redis import RedisManagementClient
-from azure.mgmt.redis.models import Sku, RedisCreateOrUpdateParameters
+from azure.mgmt.redis.models import Sku, RedisCreateOrUpdateParameters, SkuName, SkuFamily
 from azure.mgmt.resource.resources import ResourceManagementClient
 from azure.common.credentials import ServicePrincipalCredentials
 
@@ -38,7 +37,9 @@ class CloudshellAzureRedisCacheDriver(ResourceDriverInterface):
         rmc = self._get_redis_management_client(rc.subscription_id, rc.client_id, rc.secret, rc.tenant_id)
         redis_cache = rmc.redis.create_or_update(rc.resource_group, rc.cache_name,
                                                  RedisCreateOrUpdateParameters(
-                                                     sku=Sku(name='Basic', family='C', capacity=1),
+                                                     sku=Sku(name=rc.sku_name,
+                                                             family=rc.sku_family,
+                                                             capacity=rc.sku_capacity),
                                                      location=rc.region))
 
     def _get_redis_management_client(self, subscription_id, client_id, secret, tenant):
@@ -81,6 +82,34 @@ class RedisContext:
         self._region = azure_attributes['Region']
         self._cache_name = context.resource.attributes['Cache Name']
         self._resource_group = context.reservation.reservation_id
+        self._sku_name = self._get_sku_name(context.resource.attributes['Tier'])
+        # Sku family is C for basic or standard, P for premium. https://docs.microsoft.com/en-us/rest/api/redis/redis
+        self._sku_family = SkuFamily.c if self._sku_name in [SkuName.basic, SkuName.standard] else SkuFamily.p
+        self._sku_capacity = self._get_sku_capacity(context.resource.attributes['Cache Capacity'])
+
+    def _get_sku_capacity(self, capacity_string):
+        try:
+            capacity = int(capacity_string)
+            if capacity not in range(7) and self.sku_family == SkuFamily.c:
+                raise ValueError('Unsupported capacity value')
+            else:
+                if capacity not in range(1, 5) and self.sku_family == SkuFamily.p:
+                    raise ValueError('Unsupported capacity value')
+        except ValueError:
+            raise Exception('Valid capacity values: \n Valid values: for Basic/Standard tiers: 0, 1, 2, 3, 4, 5, 6\n for Premium tier: 1, 2, 3, 4. ')
+        return capacity
+
+    @staticmethod
+    def _get_sku_name(sku_name):
+        switcher = {
+            'basic': SkuName.basic,
+            'standard': SkuName.standard
+        }
+        try:
+            sku_name = switcher[sku_name.lower()]
+        except KeyError:
+            raise Exception('Unsupported Sku Name; valid parameters are Basic, Standard')
+        return sku_name
 
     @property
     def subscription_id(self):
@@ -109,3 +138,15 @@ class RedisContext:
     @property
     def cache_name(self):
         return self._cache_name
+
+    @property
+    def sku_name(self):
+        return self._sku_name
+
+    @property
+    def sku_family(self):
+        return self._sku_family
+
+    @property
+    def sku_capacity(self):
+        return self._sku_capacity

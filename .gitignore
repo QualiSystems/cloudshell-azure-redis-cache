@@ -58,6 +58,6 @@ docs/_build/
 # PyBuilder
 target/
 cloudshell_config.yml
-/src/redis_deployer/test_cloudshell_azure_redis_cache.py
 *.zip
 /src/cdn_deployer/test_cloudshell_azure_cdn.py
+/src/redis_deployer/test_constants.py
