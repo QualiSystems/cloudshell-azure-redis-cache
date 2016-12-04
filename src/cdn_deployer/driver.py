@@ -1,8 +1,8 @@
 from cloudshell.api.cloudshell_api import CloudShellAPISession
 from cloudshell.shell.core.resource_driver_interface import ResourceDriverInterface
-from cloudshell.shell.core.driver_context import InitCommandContext, ResourceCommandContext, AutoLoadCommandContext, \
-    AutoLoadAttribute, AutoLoadResource, AutoLoadDetails
+from cloudshell.shell.core.driver_context import InitCommandContext, ResourceCommandContext
 from azure.common.credentials import ServicePrincipalCredentials
+from azure.mgmt.resource.resources import ResourceManagementClient
 from azure.mgmt.cdn import CdnManagementClient
 from azure.mgmt.cdn.models import ProfileCreateParameters, Sku, SkuName, EndpointCreateParameters, \
     QueryStringCachingBehavior, DeepCreatedOrigin
@@ -63,6 +63,7 @@ class CloudshellAzureCdnDeployerDriver(ResourceDriverInterface):
 
     def _get_cdn_management_client(self, subscription_id, client_id, secret, tenant):
         credentials = ServicePrincipalCredentials(client_id=client_id, secret=secret, tenant=tenant)
+        ResourceManagementClient(credentials, subscription_id).providers.register('Microsoft.Cdn')
         cmc = CdnManagementClient(credentials, subscription_id)
         return cmc
 

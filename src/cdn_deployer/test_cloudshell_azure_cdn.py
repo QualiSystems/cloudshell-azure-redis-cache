@@ -71,7 +71,7 @@ class TestCloudshellAzureCdnDeployerDriver(unittest.TestCase):
     def tearDown(self):
         delete_resource_group(context)
 
-    def test_000_something(self):
+    def test_deploy_cdn_endpoint(self):
         driver = CloudshellAzureCdnDeployerDriver(get_azure_attributes_service=mock_get_azure_attributes)
         driver.deploy(context)
 

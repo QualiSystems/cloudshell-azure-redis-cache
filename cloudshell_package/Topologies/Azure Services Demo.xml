@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TopologyInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Details Name="Azure Services Demo" Alias="Azure Services Demo" Driver="Python Setup &amp; Teardown" SetupDuration="10" TeardownDuration="10" Public="false" DefaultDuration="120">
+    <Description>Blueprint with preconfigured setup &amp; teardown processes.Deploys Apps and resolves connections on Setup, and deletes App VMs on Teardown</Description>
+    <Categories />
+    <Scripts>
+      <Script Name="Default Sandbox Teardown" />
+      <Script Name="Default Sandbox Setup" />
+    </Scripts>
+    <Diagram Zoom="1" NodeSize="Medium" />
+  </Details>
+  <Services>
+    <Service PositionX="607" PositionY="51" Alias="CDN Endpoint 1 - Wikipedia" ServiceName="CDN Endpoint">
+      <Attributes>
+        <Attribute Name="Azure Resource" Value="Azure" />
+        <Attribute Name="Profile Name" Value="qualiprofile" />
+        <Attribute Name="Endpoint Origin Host Header" Value="en.wikipedia.org" />
+        <Attribute Name="Endpoint Origin Host Name" Value="en.wikipedia.org" />
+        <Attribute Name="Endpoint Origin Path" Value="/wiki" />
+      </Attributes>
+    </Service>
+    <Service PositionX="607" PositionY="263" Alias="Redis Cache" ServiceName="Redis Cache">
+      <Attributes>
+        <Attribute Name="Azure Resource" Value="Azure" />
+        <Attribute Name="Cache Name" Value="qualirediscacheforpoc" />
+        <Attribute Name="Cache Capacity" Value="0" />
+        <Attribute Name="Tier" Value="Basic" />
+      </Attributes>
+    </Service>
+    <Service PositionX="607" PositionY="158" Alias="CDN Endpoint 2 - google trends" ServiceName="CDN Endpoint">
+      <Attributes>
+        <Attribute Name="Azure Resource" Value="Azure" />
+        <Attribute Name="Profile Name" Value="qualiprofile" />
+        <Attribute Name="Endpoint Origin Host Header" Value="www.google.com" />
+        <Attribute Name="Endpoint Origin Host Name" Value="www.google.com" />
+        <Attribute Name="Endpoint Origin Path" Value="/trends" />
+      </Attributes>
+    </Service>
+  </Services>
+  <Apps>
+    <App PositionX="103" PositionY="51" TemplateName="Azure Instance">
+      <AppResourceInfo Name="Azure Instance">
+        <AppResources>
+          <AppResource ModelName="Generic App Model" Driver="">
+            <Attributes>
+              <Attribute Name="Password" Value="3M3u7nkDzxWb0aJ/IZYeWw==" />
+              <Attribute Name="Public IP" Value="" />
+              <Attribute Name="User" Value="" />
+            </Attributes>
+          </AppResource>
+        </AppResources>
+        <DeploymentPaths>
+          <DeploymentPath Name="Azure - Azure VM" Default="true">
+            <DeploymentService Name="Azure VM" CloudProvider="Azure">
+              <Attributes>
+                <Attribute Name="Cloud Provider" Value="Azure" />
+                <Attribute Name="Instance Type" Value="Standard_A0" />
+                <Attribute Name="Wait for IP" Value="False" />
+                <Attribute Name="Autoload" Value="True" />
+                <Attribute Name="Add Public IP" Value="False" />
+                <Attribute Name="Public IP Type" Value="Dynamic" />
+                <Attribute Name="Inbound Ports" Value="" />
+                <Attribute Name="Outbound Ports" Value="" />
+                <Attribute Name="Image Publisher" Value="Canonical" />
+                <Attribute Name="Image Offer" Value="UbuntuServer" />
+                <Attribute Name="Image SKU" Value="14.04.4-LTS" />
+              </Attributes>
+            </DeploymentService>
+          </DeploymentPath>
+        </DeploymentPaths>
+      </AppResourceInfo>
+    </App>
+  </Apps>
+</TopologyInfo>

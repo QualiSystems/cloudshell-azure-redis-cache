@@ -70,7 +70,7 @@ class TestCloudshellAzureRedisCacheDriver(unittest.TestCase):
     def tearDown(self):
         delete_resource_group(context)
 
-    def test_000_something(self):
+    def test_deploy_redis_cache(self):
         driver = CloudshellAzureRedisCacheDriver(get_azure_attributes_service=mock_get_azure_attributes)
         driver.deploy(context)
 
