@@ -57,6 +57,7 @@ def mock_context():
     context.resource.attributes['Endpoint Origin Host Name'] = 'en.wikipedia.org'
     context.resource.attributes['Endpoint Origin Host Header'] = 'en.wikipedia.org'
     context.resource.attributes['Endpoint Origin Path'] = '/wiki'
+    context.resource.attributes['CDN Provider'] = 'Standard Akamai'
     context.reservation = Object()
     context.reservation.reservation_id = '832fccde-16e4-4353-bdde-7333872b15e7'
 
@@ -73,7 +74,7 @@ class TestCloudshellAzureCdnDeployerDriver(unittest.TestCase):
 
     def test_deploy_cdn_endpoint(self):
         driver = CloudshellAzureCdnDeployerDriver(get_azure_attributes_service=mock_get_azure_attributes)
-        driver.deploy(context)
+        driver.deploy(context, 'mocked cloud provider')
 
 
 if __name__ == '__main__':

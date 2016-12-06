@@ -25,14 +25,15 @@ class CloudshellAzureRedisCacheDriver(ResourceDriverInterface):
         """
         pass
 
-    def deploy(self, context):
+    def deploy(self, context, cloud_provider):
         """
         A simple example function
         :param ResourceCommandContext context: the context the command runs on
         """
-        self._deploy_redis_cache_internal(context)
+        self._deploy_redis_cache_internal(context, cloud_provider)
 
-    def _deploy_redis_cache_internal(self, resource_context):
+    def _deploy_redis_cache_internal(self, resource_context, cloud_provider):
+        resource_context.resource.attributes['Azure Resource'] = cloud_provider
         rc = RedisContext(resource_context, self._get_azure_attributes(resource_context))
         rmc = self._get_redis_management_client(rc.subscription_id, rc.client_id, rc.secret, rc.tenant_id)
         redis_cache = rmc.redis.create_or_update(rc.resource_group, rc.cache_name,
@@ -40,7 +41,8 @@ class CloudshellAzureRedisCacheDriver(ResourceDriverInterface):
                                                      sku=Sku(name=rc.sku_name,
                                                              family=rc.sku_family,
                                                              capacity=rc.sku_capacity),
-                                                     location=rc.region))
+                                                     location=rc.region,
+                                                    tags={'sandbox_id': rc.resource_group}))
 
     def _get_redis_management_client(self, subscription_id, client_id, secret, tenant):
         credentials = ServicePrincipalCredentials(client_id=client_id, secret=secret, tenant=tenant)
@@ -108,7 +110,7 @@ class RedisContext:
         try:
             sku_name = switcher[sku_name.lower()]
         except KeyError:
-            raise Exception('Unsupported Sku Name; valid parameters are Basic, Standard')
+            raise Exception('Unsupported Pricing Tier; valid values are Basic, Standard')
         return sku_name
 
     @property

@@ -61,3 +61,10 @@ cloudshell_config.yml
 *.zip
 /src/redis_deployer/test_constants.py
 /src/cdn_deployer/test_constants.py
+/tools/deployment/
+/deployment/
+!/cloudshell_package/Resource Drivers - Python/CDN Endpoint Deployer.zip
+!/cloudshell_package/Resource Drivers - Python/Deployment Orchestrator.zip
+!/cloudshell_package/Resource Drivers - Python/Redis Deployer.zip
+!/cloudshell_package/Topology Scripts/Default Sandbox Teardown.zip
+!/cloudshell_package/Topology Scripts/Default Sandbox Setup.zip

@@ -43,6 +43,9 @@
     <AttributeInfo Name="Endpoint Origin Path" Type="String" DefaultValue="" IsReadOnly="false">
       <Rules />
     </AttributeInfo>
+    <AttributeInfo Name="CDN Provider" Type="String" DefaultValue="" Description="Supported providers: Standard Akamai, Standard Verizon" IsReadOnly="false">
+      <Rules />
+    </AttributeInfo>
   </Attributes>
   <ResourceFamilies>
     <ResourceFamily Name="Generic App Family" IsLockedByDefault="true" Description="" IsSearchable="true" ResourceType="Application">
@@ -91,7 +94,7 @@
     </ResourceFamily>
     <ResourceFamily Name="Azure Service" Description="" IsService="true" ServiceType="Regular">
       <AttachedAttributes>
-        <AttachedAttribute Name="Azure Resource" IsOverridable="true" IsLocal="true" UserInput="true">
+        <AttachedAttribute Name="Azure Resource" IsOverridable="true" IsLocal="true">
           <AllowedValues />
         </AttachedAttribute>
       </AttachedAttributes>
@@ -143,6 +146,9 @@
             <AttachedAttribute Name="Endpoint Origin Path" IsOverridable="true" IsLocal="true" UserInput="true">
               <AllowedValues />
             </AttachedAttribute>
+            <AttachedAttribute Name="CDN Provider" IsOverridable="true" IsLocal="true" UserInput="true">
+              <AllowedValues />
+            </AttachedAttribute>
           </AttachedAttributes>
           <AttributeValues>
             <AttributeValue Name="Azure Resource" Value="" />
@@ -150,6 +156,7 @@
             <AttributeValue Name="Endpoint Origin Host Header" Value="" />
             <AttributeValue Name="Endpoint Origin Host Name" Value="" />
             <AttributeValue Name="Endpoint Origin Path" Value="" />
+            <AttributeValue Name="CDN Provider" Value="Standard Akamai" />
           </AttributeValues>
           <ParentModels />
           <Drivers>

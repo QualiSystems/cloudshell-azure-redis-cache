@@ -72,7 +72,7 @@ class TestCloudshellAzureRedisCacheDriver(unittest.TestCase):
 
     def test_deploy_redis_cache(self):
         driver = CloudshellAzureRedisCacheDriver(get_azure_attributes_service=mock_get_azure_attributes)
-        driver.deploy(context)
+        driver.deploy(context, 'mocked cloud provider')
 
 
 if __name__ == '__main__':

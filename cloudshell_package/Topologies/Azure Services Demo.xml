@@ -17,6 +17,7 @@
         <Attribute Name="Endpoint Origin Host Header" Value="en.wikipedia.org" />
         <Attribute Name="Endpoint Origin Host Name" Value="en.wikipedia.org" />
         <Attribute Name="Endpoint Origin Path" Value="/wiki" />
+        <Attribute Name="CDN Provider" Value="Standard Akamai" />
       </Attributes>
     </Service>
     <Service PositionX="607" PositionY="263" Alias="Redis Cache" ServiceName="Redis Cache">
@@ -34,6 +35,7 @@
         <Attribute Name="Endpoint Origin Host Header" Value="www.google.com" />
         <Attribute Name="Endpoint Origin Host Name" Value="www.google.com" />
         <Attribute Name="Endpoint Origin Path" Value="/trends" />
+        <Attribute Name="CDN Provider" Value="Standard Akamai" />
       </Attributes>
     </Service>
   </Services>
@@ -71,4 +73,7 @@
       </AppResourceInfo>
     </App>
   </Apps>
+  <Inputs>
+    <ServiceInput Name="Cache Name" DefaultValue="qualirediscacheforpoc" ResourceName="Redis Cache" InputType="Attribute" />
+  </Inputs>
 </TopologyInfo>

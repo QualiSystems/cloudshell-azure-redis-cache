@@ -5,7 +5,7 @@ from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.resource.resources import ResourceManagementClient
 from azure.mgmt.cdn import CdnManagementClient
 from azure.mgmt.cdn.models import ProfileCreateParameters, Sku, SkuName, EndpointCreateParameters, \
-    QueryStringCachingBehavior, DeepCreatedOrigin
+    QueryStringCachingBehavior, DeepCreatedOrigin, ErrorResponseException
 from uuid import uuid4
 
 
@@ -27,21 +27,30 @@ class CloudshellAzureCdnDeployerDriver(ResourceDriverInterface):
         """
         pass
 
-    def deploy(self, context):
+    def create_profile(self, context, cloud_provider):
+        self._deploy_cdn_profile(context, cloud_provider)
+
+    def deploy(self, context, cloud_provider):
         """
         A simple example function
         :param ResourceCommandContext context: the context the command runs on
         """
-        self._deploy_cdn_service(context)
+        self._deploy_cdn_endpoint(context, cloud_provider)
 
-    def _deploy_cdn_service(self, resource_context):
+    def _deploy_cdn_profile(self, resource_context, cloud_provider):
+        resource_context.resource.attributes['Azure Resource'] = cloud_provider
         rc = CdnContext(resource_context, self._get_azure_attributes(resource_context))
         cmc = self._get_cdn_management_client(rc.subscription_id, rc.client_id, rc.secret, rc.tenant_id)
-        profile_properties = ProfileCreateParameters(location=rc.region,
-                                                     sku=Sku(name=SkuName.standard_akamai),
-                                                     tags=dict())
-        result = cmc.profiles.create(rc.profile_name, profile_properties, rc.resource_group)
-        result.wait()
+        self._create_profile(cmc, rc)
+
+    def _deploy_cdn_endpoint(self, resource_context, cloud_provider):
+        resource_context.resource.attributes['Azure Resource'] = cloud_provider
+        rc = CdnContext(resource_context, self._get_azure_attributes(resource_context))
+        cmc = self._get_cdn_management_client(rc.subscription_id, rc.client_id, rc.secret, rc.tenant_id)
+        result = self._create_endpoint(cmc, rc)
+        print result
+
+    def _create_endpoint(self, cmc, rc):
         dco = DeepCreatedOrigin(host_name=rc._origin_hostname, http_port=80, https_port=443, name=uuid4())
         endpoint_properties = EndpointCreateParameters(location=rc.region,
                                                        tags=dict(),
@@ -52,14 +61,21 @@ class CloudshellAzureCdnDeployerDriver(ResourceDriverInterface):
                                                        is_compression_enabled=True,
                                                        query_string_caching_behavior=QueryStringCachingBehavior.ignore_query_string,
                                                        content_types_to_compress=['text/plain', 'text/html', 'text/css',
-                                                                                  'text/javascript', 'application/x-javascript',
-                                                                                  'application/javascript', 'application/json',
+                                                                                  'text/javascript',
+                                                                                  'application/x-javascript',
+                                                                                  'application/javascript',
+                                                                                  'application/json',
                                                                                   'application/xml'],
-                                                       origins=[dco]
-
-                                                       )
+                                                       origins=[dco])
         result = cmc.endpoints.create(uuid4(), endpoint_properties, rc.profile_name, rc.resource_group)
-        print result
+        return result
+
+    def _create_profile(self, cmc, rc):
+        profile_properties = ProfileCreateParameters(location=rc.region,
+                                                     sku=Sku(name=rc.sku_name),
+                                                     tags={'sandbox_id': rc.resource_group})
+        result = cmc.profiles.create(rc.profile_name, profile_properties, rc.resource_group)
+        result.wait()
 
     def _get_cdn_management_client(self, subscription_id, client_id, secret, tenant):
         credentials = ServicePrincipalCredentials(client_id=client_id, secret=secret, tenant=tenant)
@@ -102,9 +118,22 @@ class CdnContext:
         self._region = azure_attributes['Region']
         self._resource_group = context.reservation.reservation_id
         self._profile_name = context.resource.attributes['Profile Name']
+        self._sku_name = self._get_sku_name_from_provider(context.resource.attributes['CDN Provider'])
         self._origin_hostname = context.resource.attributes['Endpoint Origin Host Name']
         self._origin_host_header = context.resource.attributes['Endpoint Origin Host Header']
         self._origin_path = context.resource.attributes['Endpoint Origin Path']
+
+    def _get_sku_name_from_provider(self, cdn_provider):
+        switcher = {
+            'standard akamai': SkuName.standard_akamai,
+            'standard verizon': SkuName.standard_verizon,
+            'premium verizon': SkuName.premium_verizon
+        }
+        try:
+            sku_name = switcher[cdn_provider.lower()]
+        except KeyError:
+            raise Exception('Unsupported CDN Provider; valid values are Standard Akamai, Standard Verizon, Premium Verizon')
+        return sku_name
 
     @property
     def origin_hostname(self):
@@ -145,3 +174,7 @@ class CdnContext:
     @property
     def profile_name(self):
         return self._profile_name
+
+    @property
+    def sku_name(self):
+        return self._sku_name

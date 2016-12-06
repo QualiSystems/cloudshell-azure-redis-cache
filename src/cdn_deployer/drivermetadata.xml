@@ -1,7 +1,16 @@
 <Driver Description="Describe the purpose of your CloudShell shell" MainClass="driver.CloudshellAzureCdnDeployerDriver" Name="CloudshellAzureRedisCacheDriver" Version="1.0.0">
     <Layout>
         <Category Name="Hidden Commands">
-            <Command Description="..." Name="deploy" />
+            <Command Description="..." Name="deploy" DisplayName="Deploy CDN Endpoint">
+                <Parameters>
+                    <Parameter Name="cloud_provider" DisplayName="Cloud Provider" Type="String" Mandatory="False" DefaultValue=""/>
+                </Parameters>
+            </Command>
+            <Command Description="..." Name="create_profile" DisplayName="Create CDN Profile">
+                <Parameters>
+                    <Parameter Name="cloud_provider" DisplayName="Cloud Provider" Type="String" Mandatory="False" DefaultValue=""/>
+                </Parameters>
+            </Command>
         </Category>
     </Layout>
 </Driver>
