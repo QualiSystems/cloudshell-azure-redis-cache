@@ -73,7 +73,7 @@ class CloudshellAzureCdnDeployerDriver(ResourceDriverInterface):
     def _create_profile(self, cmc, rc):
         profile_properties = ProfileCreateParameters(location=rc.region,
                                                      sku=Sku(name=rc.sku_name),
-                                                     tags={'sandbox_id': rc.resource_group})
+                                                     tags={'ReservationId': rc.resource_group})
         result = cmc.profiles.create(rc.profile_name, profile_properties, rc.resource_group)
         result.wait()
 

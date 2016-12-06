@@ -4,10 +4,10 @@
     <Description>Blueprint with preconfigured setup &amp; teardown processes.Deploys Apps and resolves connections on Setup, and deletes App VMs on Teardown</Description>
     <Categories />
     <Scripts>
-      <Script Name="Default Sandbox Teardown" />
       <Script Name="Default Sandbox Setup" />
+      <Script Name="Default Sandbox Teardown" />
     </Scripts>
-    <Diagram Zoom="1" NodeSize="Medium" />
+    <Diagram Zoom="1.1" NodeSize="Medium" />
   </Details>
   <Services>
     <Service PositionX="607" PositionY="51" Alias="CDN Endpoint 1 - Wikipedia" ServiceName="CDN Endpoint">
@@ -26,6 +26,12 @@
         <Attribute Name="Cache Name" Value="qualirediscacheforpoc" />
         <Attribute Name="Cache Capacity" Value="0" />
         <Attribute Name="Tier" Value="Basic" />
+      </Attributes>
+    </Service>
+    <Service PositionX="607" PositionY="375" Alias="Media Service" ServiceName="Media Service">
+      <Attributes>
+        <Attribute Name="Azure Resource" Value="" />
+        <Attribute Name="Media Service Name" Value="rapapapapalapapa" />
       </Attributes>
     </Service>
     <Service PositionX="607" PositionY="158" Alias="CDN Endpoint 2 - google trends" ServiceName="CDN Endpoint">
@@ -75,5 +81,6 @@
   </Apps>
   <Inputs>
     <ServiceInput Name="Cache Name" DefaultValue="qualirediscacheforpoc" ResourceName="Redis Cache" InputType="Attribute" />
+    <ServiceInput Name="Media Service Name" DefaultValue="rapapapapalapapa" Description="" ResourceName="Media Service" InputType="Attribute" />
   </Inputs>
 </TopologyInfo>

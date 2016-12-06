@@ -2,14 +2,17 @@
 # -*- coding: utf-8 -*-
 from azure.mgmt.resource.resources import ResourceManagementClient
 from azure.common.credentials import ServicePrincipalCredentials
+from azure.mgmt.storage import StorageManagementClient
+from azure.mgmt.storage.models import StorageAccountCreateParameters, Sku, SkuName, Kind
 import test_constants as c
 from uuid import uuid4
+
 """
 Tests for `CloudshellAzureMediaServicesDriver`
 """
 
 import unittest
-from driver import CloudshellAzureRedisCacheDriver
+from driver import CloudshellAzureMediaServicesDriver
 
 
 def mock_get_azure_attributes(context):
@@ -28,6 +31,27 @@ def resource_management_client(azure_attributes):
                                               tenant=azure_attributes['Azure Tenant'])
     rmc = ResourceManagementClient(credentials, azure_attributes['Azure Subscription ID'])
     return rmc
+
+
+def storage_management_client(azure_attributes):
+    credentials = ServicePrincipalCredentials(client_id=azure_attributes['Azure Client ID'],
+                                              secret=azure_attributes['Azure Secret'],
+                                              tenant=azure_attributes['Azure Tenant'])
+    smc = StorageManagementClient(credentials, azure_attributes['Azure Subscription ID'])
+    return smc
+
+
+def create_storage(context):
+    azure_attributes = mock_get_azure_attributes(context)
+    smc = storage_management_client(azure_attributes)
+    result = smc.storage_accounts.create(resource_group_name=context.reservation.reservation_id,
+                                         account_name=context.reservation.reservation_id.replace('-', '')[:-8],
+                                         parameters=StorageAccountCreateParameters(
+                                             sku=Sku(SkuName.standard_ragrs),
+                                             kind=Kind.storage,
+                                             location=azure_attributes['Region'],
+                                             tags={'ReservationId': context.reservation.reservation_id}))
+    result.wait()
 
 
 def create_resource_group(context):
@@ -53,25 +77,24 @@ def mock_context():
     context = Object()
     context.resource = Object()
     context.resource.attributes = dict()
-    context.resource.attributes['Cache Name'] = uuid4()
-    context.resource.attributes['Tier'] = 'Basic'
-    context.resource.attributes['Cache Capacity'] = '2'
+    context.resource.attributes['Media Service Name'] = str(uuid4()).replace('-', '')[:-8]
     context.reservation = Object()
     context.reservation.reservation_id = str(uuid4())
 
     return context
 
 
-class TestCloudshellAzureRedisCacheDriver(unittest.TestCase):
+class TestCloudshellAzureMediaServicesDriver(unittest.TestCase):
     def setUp(self):
         self.context = mock_context()
         create_resource_group(context)
+        create_storage(context)
 
     def tearDown(self):
         delete_resource_group(context)
 
-    def test_deploy_redis_cache(self):
-        driver = CloudshellAzureRedisCacheDriver(get_azure_attributes_service=mock_get_azure_attributes)
+    def test_media_services(self):
+        driver = CloudshellAzureMediaServicesDriver(get_azure_attributes_service=mock_get_azure_attributes)
         driver.deploy(context, 'mocked cloud provider')
 
 

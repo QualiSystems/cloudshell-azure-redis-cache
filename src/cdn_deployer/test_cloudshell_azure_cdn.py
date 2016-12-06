@@ -59,7 +59,7 @@ def mock_context():
     context.resource.attributes['Endpoint Origin Path'] = '/wiki'
     context.resource.attributes['CDN Provider'] = 'Standard Akamai'
     context.reservation = Object()
-    context.reservation.reservation_id = '832fccde-16e4-4353-bdde-7333872b15e7'
+    context.reservation.reservation_id = str(uuid4())
 
     return context
 

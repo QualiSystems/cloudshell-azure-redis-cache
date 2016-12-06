@@ -1,7 +1,7 @@
 <Driver Description="Describe the purpose of your CloudShell shell" MainClass="driver.CloudshellAzureMediaServicesDriver" Name="CloudshellAzureMediaServicesDriver" Version="1.0.0">
     <Layout>
         <Category Name="Hidden Commands">
-            <Command Description="..." Name="deploy" DisplayName="Deploy Redis Cache">
+            <Command Description="..." Name="deploy" DisplayName="Deploy Media Services">
                 <Parameters>
                     <Parameter Name="cloud_provider" DisplayName="Cloud Provider" Type="String" Mandatory="False" DefaultValue=""/>
                 </Parameters>

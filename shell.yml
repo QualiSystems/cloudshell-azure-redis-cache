@@ -4,4 +4,4 @@ shell:
     email: info@quali.com
     description: Describe the purpose of your CloudShell shell
     version: 0.1.0
-    driver_name: CloudshellAzureRedisCacheDriver
+    driver_name: CloudshellAzureMediaServicesDriver

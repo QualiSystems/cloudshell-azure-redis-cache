@@ -46,6 +46,9 @@
     <AttributeInfo Name="CDN Provider" Type="String" DefaultValue="" Description="Supported providers: Standard Akamai, Standard Verizon" IsReadOnly="false">
       <Rules />
     </AttributeInfo>
+    <AttributeInfo Name="Media Service Name" Type="String" DefaultValue="" IsReadOnly="false">
+      <Rules />
+    </AttributeInfo>
   </Attributes>
   <ResourceFamilies>
     <ResourceFamily Name="Generic App Family" IsLockedByDefault="true" Description="" IsSearchable="true" ResourceType="Application">
@@ -164,6 +167,25 @@
           </Drivers>
           <Scripts />
         </ResourceModel>
+        <ResourceModel Name="Media Service" Description="" SupportsConcurrentCommands="false">
+          <AttachedAttributes>
+            <AttachedAttribute Name="Azure Resource" IsOverridable="true" IsLocal="true">
+              <AllowedValues />
+            </AttachedAttribute>
+            <AttachedAttribute Name="Media Service Name" IsOverridable="true" IsLocal="true" UserInput="true">
+              <AllowedValues />
+            </AttachedAttribute>
+          </AttachedAttributes>
+          <AttributeValues>
+            <AttributeValue Name="Azure Resource" Value="" />
+            <AttributeValue Name="Media Service Name" Value="" />
+          </AttributeValues>
+          <ParentModels />
+          <Drivers>
+            <DriverName>Media Service Deployer</DriverName>
+          </Drivers>
+          <Scripts />
+        </ResourceModel>
       </Models>
       <Categories>
         <Category>Applications</Category>
@@ -172,15 +194,16 @@
   </ResourceFamilies>
   <DriverDescriptors>
     <DriverDescriptor Name="Deployment Orchestrator" Description="Deploy App" DriverType="PythonDriver" />
+    <DriverDescriptor Name="Media Service Deployer" Description="Describe the purpose of your CloudShell shell" DriverType="PythonDriver" />
     <DriverDescriptor Name="Redis Deployer" Description="Deploys a Redis Cache To Azure" DriverType="PythonDriver" />
     <DriverDescriptor Name="CDN Endpoint Deployer" Description="Describe the purpose of your CloudShell shell" DriverType="PythonDriver" />
     <DriverDescriptor Name="Python Setup &amp; Teardown" Description="This driver is used for running Python scripts in the environment setup and teardown. To use this driver, make sure you select a suitable setup and/or teardown script." DriverType="TestShellDriver" />
   </DriverDescriptors>
   <ScriptDescriptors>
-    <ScriptDescriptor Name="Default Sandbox Teardown" CategoryName="Hidden Commands" Version="1.0.1614 " Alias="Teardown script">
+    <ScriptDescriptor Name="Default Sandbox Setup" CategoryName="Hidden Commands" Alias="Setup script">
       <ScriptInputs />
     </ScriptDescriptor>
-    <ScriptDescriptor Name="Default Sandbox Setup" CategoryName="Hidden Commands" Version="1.0.1614 " Alias="Setup script">
+    <ScriptDescriptor Name="Default Sandbox Teardown" CategoryName="Hidden Commands" Version="1.0.1614 " Alias="Teardown script">
       <ScriptInputs />
     </ScriptDescriptor>
   </ScriptDescriptors>

@@ -42,7 +42,7 @@ class CloudshellAzureRedisCacheDriver(ResourceDriverInterface):
                                                              family=rc.sku_family,
                                                              capacity=rc.sku_capacity),
                                                      location=rc.region,
-                                                    tags={'sandbox_id': rc.resource_group}))
+                                                    tags={'ReservationId': rc.resource_group}))
 
     def _get_redis_management_client(self, subscription_id, client_id, secret, tenant):
         credentials = ServicePrincipalCredentials(client_id=client_id, secret=secret, tenant=tenant)
