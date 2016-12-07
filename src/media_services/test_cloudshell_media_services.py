@@ -4,8 +4,10 @@ from azure.mgmt.resource.resources import ResourceManagementClient
 from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.storage import StorageManagementClient
 from azure.mgmt.storage.models import StorageAccountCreateParameters, Sku, SkuName, Kind
+import cloudshell.api.cloudshell_api as csapi
 import test_constants as c
 from uuid import uuid4
+import time
 
 """
 Tests for `CloudshellAzureMediaServicesDriver`
@@ -15,7 +17,7 @@ import unittest
 from driver import CloudshellAzureMediaServicesDriver
 
 
-def mock_get_azure_attributes(context):
+def mock_get_azure_attributes(context, *args):
     azure_attributes = dict()
     azure_attributes['Azure Subscription ID'] = c.SUBSCRIPTION_ID
     azure_attributes['Azure Client ID'] = c.CLIENT_ID
@@ -77,11 +79,20 @@ def mock_context():
     context = Object()
     context.resource = Object()
     context.resource.attributes = dict()
-    context.resource.attributes['Media Service Name'] = str(uuid4()).replace('-', '')[:-8]
+    context.resource.name = 'lolwut'
     context.reservation = Object()
     context.reservation.reservation_id = str(uuid4())
-
+    context.reservation.domain = 'Global'
+    context.connectivity = Object()
+    context.connectivity.server_address = 'localhost'
+    context.connectivity.admin_auth_token = csapi.CloudShellAPISession(host=context.connectivity.server_address,
+                                                                       domain=context.reservation.domain,
+                                                                       username='admin',
+                                                                       password='admin').token_id
     return context
+
+api_session = csapi.CloudShellAPISession
+api_session.SetServiceAttributesValues = lambda *args, **kwargs: None
 
 
 class TestCloudshellAzureMediaServicesDriver(unittest.TestCase):
@@ -91,10 +102,21 @@ class TestCloudshellAzureMediaServicesDriver(unittest.TestCase):
         create_storage(context)
 
     def tearDown(self):
-        delete_resource_group(context)
+        # can only delete once the media service has reached a certain stage
+        # todo detect that redis cache is deleteable
+        for i in range(10):
+            try:
+                delete_resource_group(context)
+                break
+            except Exception as e:
+                if i == 9:
+                    raise e
+                else:
+                    time.sleep(120)
+                    continue
 
     def test_media_services(self):
-        driver = CloudshellAzureMediaServicesDriver(get_azure_attributes_service=mock_get_azure_attributes)
+        driver = CloudshellAzureMediaServicesDriver(get_azure_attributes_service=mock_get_azure_attributes, api_session=api_session)
         driver.deploy(context, 'mocked cloud provider')
 
 

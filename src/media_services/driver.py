@@ -1,4 +1,4 @@
-from cloudshell.api.cloudshell_api import CloudShellAPISession
+from cloudshell.api.cloudshell_api import CloudShellAPISession, AttributeNameValue
 from cloudshell.shell.core.resource_driver_interface import ResourceDriverInterface
 from cloudshell.shell.core.driver_context import InitCommandContext, ResourceCommandContext
 from azure.mgmt.media import MediaServicesManagementClient
@@ -8,10 +8,11 @@ from azure.mgmt.media.models import StorageAccount
 from azure.mgmt.resource.resources import ResourceManagementClient
 from azure.common.credentials import ServicePrincipalCredentials
 import re
+from uuid import uuid4
 
 
 class CloudshellAzureMediaServicesDriver(ResourceDriverInterface):
-    def __init__(self, get_azure_attributes_service=None):
+    def __init__(self, get_azure_attributes_service=None, api_session=None):
         """
         ctor must be without arguments, it is created with reflection at run time
         """
@@ -19,6 +20,10 @@ class CloudshellAzureMediaServicesDriver(ResourceDriverInterface):
             self._get_azure_attributes = get_azure_attributes
         else:
             self._get_azure_attributes = get_azure_attributes_service
+        if api_session is None:
+            self._api_session = CloudShellAPISession
+        else:
+            self._api_session = api_session
 
     def initialize(self, context):
         """
@@ -33,7 +38,7 @@ class CloudshellAzureMediaServicesDriver(ResourceDriverInterface):
         A simple example function
         :param ResourceCommandContext context: the context the command runs on
         """
-        self._deploy_media_services(context, cloud_provider)
+        return self._deploy_media_services(context, cloud_provider)
 
     def _get_storage_account_from_reservation(self, media_services_context):
         smc = self._get_storage_management_client(media_services_context.subscription_id,
@@ -50,14 +55,18 @@ class CloudshellAzureMediaServicesDriver(ResourceDriverInterface):
         raise Exception('Could not find storage account in resource group ' + str(media_services_context.resource_group))
 
     def _deploy_media_services(self, resource_context, cloud_provider):
+        resid = resource_context.reservation.reservation_id
+        api = _get_api(resource_context, self._api_session)
         resource_context.resource.attributes['Azure Resource'] = cloud_provider
-        mc = MediaServicesContext(resource_context, self._get_azure_attributes(resource_context))
+        mc = MediaServicesContext(resource_context, self._get_azure_attributes(resource_context, api))
         msc = self._get_media_services_client(mc.subscription_id, mc.client_id, mc.secret, mc.tenant_id)
         storage_account = self._get_storage_account_from_reservation(mc)
         result = msc.media_service.create(mc.resource_group, mc.media_service_name,
-                                          MediaService(location=mc.region, tags={'ReservationId': mc.resource_group},
+                                          MediaService(location=mc.region, tags={'ReservationId': resid},
                                                        storage_accounts=[storage_account]))
-        print result
+        api.SetServiceAttributesValues(resid, resource_context.resource.name,
+                                       [AttributeNameValue('Cache Name', mc.media_service_name)])
+        return 'Azure Service Deployed >> \'Media Service Name\': \'{0}\''.format(mc.media_service_name)
 
     def _get_media_services_client(self, subscription_id, client_id, secret, tenant):
         credentials = ServicePrincipalCredentials(client_id=client_id, secret=secret, tenant=tenant)
@@ -76,14 +85,20 @@ class CloudshellAzureMediaServicesDriver(ResourceDriverInterface):
         pass
 
 
-def get_azure_attributes(context):
+def _get_api(resource_context, api_session):
+    return api_session(host=resource_context.connectivity.server_address,
+                                token_id=resource_context.connectivity.admin_auth_token,
+                                domain=resource_context.reservation.domain)
+
+
+def get_azure_attributes(context, api=None):
     """
     :type context: cloudshell.shell.core.driver_context.ResourceCommandContext
+    :type api: cloudshell.api.cloudshell_api.CloudShellAPISession
     :rtype dict(str):
     """
-    api = CloudShellAPISession(host=context.connectivity.server_address,
-                               token_id=context.connectivity.admin_auth_token,
-                               domain=context.reservation.domain)
+    if api is not None:
+        api = _get_api(context, CloudShellAPISession)
     azure_resource_name = context.resource.attributes['Azure Resource']
     azure_resource = api.GetResourceDetails(azure_resource_name)
     azure_attributes = {resattr.Name: resattr.Value for resattr in azure_resource.ResourceAttributes}
@@ -102,7 +117,7 @@ class MediaServicesContext:
         self._tenant_id = azure_attributes['Azure Tenant']
         self._region = azure_attributes['Region']
         self._resource_group = context.reservation.reservation_id
-        self._media_service_name = context.resource.attributes["Media Service Name"]
+        self._media_service_name = str(uuid4()).replace('-', '')[:-8]
 
         self.validate()
 
