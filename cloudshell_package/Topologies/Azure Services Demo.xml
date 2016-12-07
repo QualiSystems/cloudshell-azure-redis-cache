@@ -79,8 +79,4 @@
       </AppResourceInfo>
     </App>
   </Apps>
-  <Inputs>
-    <ServiceInput Name="Cache Name" DefaultValue="qualirediscacheforpoc" ResourceName="Redis Cache" InputType="Attribute" />
-    <ServiceInput Name="Media Service Name" DefaultValue="rapapapapalapapa" Description="" ResourceName="Media Service" InputType="Attribute" />
-  </Inputs>
 </TopologyInfo>

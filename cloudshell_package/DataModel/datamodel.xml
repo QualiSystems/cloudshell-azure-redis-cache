@@ -110,7 +110,7 @@
             <AttachedAttribute Name="Azure Resource" IsOverridable="true" IsLocal="true" UserInput="true">
               <AllowedValues />
             </AttachedAttribute>
-            <AttachedAttribute Name="Cache Name" IsOverridable="true" IsLocal="true" UserInput="true">
+            <AttachedAttribute Name="Cache Name" IsOverridable="true" IsLocal="true">
               <AllowedValues />
             </AttachedAttribute>
             <AttachedAttribute Name="Cache Capacity" IsOverridable="true" IsLocal="true" UserInput="true">
@@ -172,7 +172,7 @@
             <AttachedAttribute Name="Azure Resource" IsOverridable="true" IsLocal="true">
               <AllowedValues />
             </AttachedAttribute>
-            <AttachedAttribute Name="Media Service Name" IsOverridable="true" IsLocal="true" UserInput="true">
+            <AttachedAttribute Name="Media Service Name" IsOverridable="true" IsLocal="true">
               <AllowedValues />
             </AttachedAttribute>
           </AttachedAttributes>

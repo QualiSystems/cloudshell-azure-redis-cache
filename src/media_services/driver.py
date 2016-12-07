@@ -65,7 +65,7 @@ class CloudshellAzureMediaServicesDriver(ResourceDriverInterface):
                                           MediaService(location=mc.region, tags={'ReservationId': resid},
                                                        storage_accounts=[storage_account]))
         api.SetServiceAttributesValues(resid, resource_context.resource.name,
-                                       [AttributeNameValue('Cache Name', mc.media_service_name)])
+                                       [AttributeNameValue('Media Service Name', mc.media_service_name)])
         return 'Azure Service Deployed >> \'Media Service Name\': \'{0}\''.format(mc.media_service_name)
 
     def _get_media_services_client(self, subscription_id, client_id, secret, tenant):

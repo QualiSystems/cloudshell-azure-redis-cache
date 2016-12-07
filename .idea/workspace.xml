@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="be0fe3d5-37a0-407f-b67a-dd6026a60633" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudshell_package/Resource Drivers - Python/CDN Endpoint Deployer.zip" afterPath="$PROJECT_DIR$/cloudshell_package/Resource Drivers - Python/CDN Endpoint Deployer.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudshell_package/Resource Drivers - Python/Redis Deployer.zip" afterPath="$PROJECT_DIR$/cloudshell_package/Resource Drivers - Python/Redis Deployer.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudshell_package/DataModel/datamodel.xml" afterPath="$PROJECT_DIR$/cloudshell_package/DataModel/datamodel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudshell_package/Topologies/Azure Services Demo.xml" afterPath="$PROJECT_DIR$/cloudshell_package/Topologies/Azure Services Demo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudshell_package/metadata.xml" afterPath="$PROJECT_DIR$/cloudshell_package/metadata.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media_services/driver.py" afterPath="$PROJECT_DIR$/src/media_services/driver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media_services/test_cloudshell_media_services.py" afterPath="$PROJECT_DIR$/src/media_services/test_cloudshell_media_services.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redis_deployer/driver.py" afterPath="$PROJECT_DIR$/src/redis_deployer/driver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redis_deployer/drivermetadata.xml" afterPath="$PROJECT_DIR$/src/redis_deployer/drivermetadata.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redis_deployer/requirements.txt" afterPath="$PROJECT_DIR$/src/redis_deployer/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redis_deployer/test_cloudshell_azure_redis_cache.py" afterPath="$PROJECT_DIR$/src/redis_deployer/test_cloudshell_azure_redis_cache.py" />
     </list>
     <ignored path="cloudshell-azure-redis-cache.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +25,7 @@
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_azure_cdn.coverage" NAME="Nosetests in test_cloudshell_azure_cdn Coverage Results" MODIFIED="1480606094347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/cdn_deployer" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureRedisCacheDriver_test_000_something__1_.coverage" NAME="Nosetest TestCloudshellAzureRedisCacheDriver.test_000_something (1) Coverage Results" MODIFIED="1480413474969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_azure_cdn__2_.coverage" NAME="Nosetests in test_cloudshell_azure_cdn (2) Coverage Results" MODIFIED="1480925720670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/cdn_deployer" />
-    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$buildsrc.coverage" NAME="buildsrc Coverage Results" MODIFIED="1481125356064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$buildsrc.coverage" NAME="buildsrc Coverage Results" MODIFIED="1481125964035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureRedisCacheDriver_test_000_something.coverage" NAME="Nosetest TestCloudshellAzureRedisCacheDriver.test_000_something Coverage Results" MODIFIED="1480406396246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_TestCloudshellAzureRedisCacheDriver.coverage" NAME="Nosetests in TestCloudshellAzureRedisCacheDriver Coverage Results" MODIFIED="1480938824916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_media_services.coverage" NAME="Nosetests in test_cloudshell_media_services Coverage Results" MODIFIED="1481124340632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/media_services" />
@@ -85,8 +82,8 @@
       <file leaf-file-name="driver.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/media_services/driver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49268293">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.6065041">
+              <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
               <folding>
                 <element signature="e#0#82#0" expanded="true" />
               </folding>
@@ -675,7 +672,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18267109" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43482795" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3368092" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1167,8 +1164,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/media_services/driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49268293">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.6065041">
+          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
           <folding>
             <element signature="e#0#82#0" expanded="true" />
           </folding>
