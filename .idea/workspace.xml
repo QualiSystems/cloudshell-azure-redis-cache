@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be0fe3d5-37a0-407f-b67a-dd6026a60633" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudshell_package/Resource Drivers - Python/CDN Endpoint Deployer.zip" afterPath="$PROJECT_DIR$/cloudshell_package/Resource Drivers - Python/CDN Endpoint Deployer.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudshell_package/Resource Drivers - Python/Redis Deployer.zip" afterPath="$PROJECT_DIR$/cloudshell_package/Resource Drivers - Python/Redis Deployer.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudshell_package/App Templates/Azure Instance.xml" afterPath="$PROJECT_DIR$/cloudshell_package/App Templates/Azure Instance.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cdn_deployer/driver.py" afterPath="$PROJECT_DIR$/src/cdn_deployer/driver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cdn_deployer/requirements.txt" afterPath="$PROJECT_DIR$/src/cdn_deployer/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media_services/driver.py" afterPath="$PROJECT_DIR$/src/media_services/driver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media_services/requirements.txt" afterPath="$PROJECT_DIR$/src/media_services/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redis_deployer/driver.py" afterPath="$PROJECT_DIR$/src/redis_deployer/driver.py" />
     </list>
     <ignored path="cloudshell-azure-redis-cache.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,20 +23,22 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_TestCloudshellAzureRedisCacheDriver.coverage" NAME="Nosetests in TestCloudshellAzureRedisCacheDriver Coverage Results" MODIFIED="1480938824916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
-    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureRedisCacheDriver_test_000_something.coverage" NAME="Nosetest TestCloudshellAzureRedisCacheDriver.test_000_something Coverage Results" MODIFIED="1480406396246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_azure_redis_cache__1_.coverage" NAME="Nosetests in test_cloudshell_azure_redis_cache (1) Coverage Results" MODIFIED="1480856520193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureRedisCacheDriver_test_deploy_redis_cache.coverage" NAME="Nosetest TestCloudshellAzureRedisCacheDriver.test_deploy_redis_cache Coverage Results" MODIFIED="1482920550520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_azure_cdn.coverage" NAME="Nosetests in test_cloudshell_azure_cdn Coverage Results" MODIFIED="1480606094347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/cdn_deployer" />
-    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_TestCloudshellAzureRedisCacheDriver__1_.coverage" NAME="Nosetests in TestCloudshellAzureRedisCacheDriver (1) Coverage Results" MODIFIED="1481102021962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
-    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_media_services.coverage" NAME="Nosetests in test_cloudshell_media_services Coverage Results" MODIFIED="1481124340632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/media_services" />
-    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_azure_redis_cache.coverage" NAME="Nosetests in test_cloudshell_azure_redis_cache Coverage Results" MODIFIED="1481121449436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureRedisCacheDriver_test_000_something__1_.coverage" NAME="Nosetest TestCloudshellAzureRedisCacheDriver.test_000_something (1) Coverage Results" MODIFIED="1480413474969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_azure_cdn__2_.coverage" NAME="Nosetests in test_cloudshell_azure_cdn (2) Coverage Results" MODIFIED="1480925720670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/cdn_deployer" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$buildsrc.coverage" NAME="buildsrc Coverage Results" MODIFIED="1482934320802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureRedisCacheDriver_test_000_something.coverage" NAME="Nosetest TestCloudshellAzureRedisCacheDriver.test_000_something Coverage Results" MODIFIED="1480406396246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_TestCloudshellAzureRedisCacheDriver.coverage" NAME="Nosetests in TestCloudshellAzureRedisCacheDriver Coverage Results" MODIFIED="1480938824916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_media_services.coverage" NAME="Nosetests in test_cloudshell_media_services Coverage Results" MODIFIED="1481124340632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/media_services" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_TestCloudshellAzureRedisCacheDriver__1_.coverage" NAME="Nosetests in TestCloudshellAzureRedisCacheDriver (1) Coverage Results" MODIFIED="1481102021962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_azure_redis_cache.coverage" NAME="Nosetests in test_cloudshell_azure_redis_cache Coverage Results" MODIFIED="1481121449436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/redis_deployer" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_TestCloudshellAzureCdnDeployerDriver.coverage" NAME="Nosetests in TestCloudshellAzureCdnDeployerDriver Coverage Results" MODIFIED="1480586296071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/cdn_deployer" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$upload_to_quali_server.coverage" NAME="upload_to_quali_server Coverage Results" MODIFIED="1481025534384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetests_in_test_cloudshell_azure_cdn__1_.coverage" NAME="Nosetests in test_cloudshell_azure_cdn (1) Coverage Results" MODIFIED="1480925256017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/cdn_deployer" />
-    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$buildsrc.coverage" NAME="buildsrc Coverage Results" MODIFIED="1481125964035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureCdnDeployerDriver_test_deploy_cdn_endpoint.coverage" NAME="Nosetest TestCloudshellAzureCdnDeployerDriver.test_deploy_cdn_endpoint Coverage Results" MODIFIED="1480927125056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/cdn_deployer" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureMediaServicesDriver_test_media_services.coverage" NAME="Nosetest TestCloudshellAzureMediaServicesDriver.test_media_services Coverage Results" MODIFIED="1482934311169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/media_services" />
+    <SUITE FILE_PATH="coverage/cloudshell-azure-redis-cache$Nosetest_TestCloudshellAzureCdnDeployerDriver_test_deploy_cdn_endpoint.coverage" NAME="Nosetest TestCloudshellAzureCdnDeployerDriver.test_deploy_cdn_endpoint Coverage Results" MODIFIED="1482870509134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/cdn_deployer" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -45,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/redis_deployer/driver.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
               <folding>
                 <element signature="e#0#82#0" expanded="true" />
               </folding>
@@ -53,23 +61,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_cloudshell_azure_redis_cache.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/redis_deployer/test_cloudshell_azure_redis_cache.py">
+      <file leaf-file-name="drivermetadata.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/media_services/drivermetadata.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
-              <folding>
-                <element signature="e#46#112#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-1.4193548">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/unittest/case.py">
+      <file leaf-file-name="buildsrc.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/buildsrc.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="364" column="46" selection-start-line="364" selection-start-column="46" selection-end-line="364" selection-end-column="46" />
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,30 +85,10 @@
         <entry file="file://$PROJECT_DIR$/src/media_services/driver.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding>
                 <element signature="e#0#82#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datamodel.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cloudshell_package/DataModel/datamodel.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.290322">
-              <caret line="27" column="233" selection-start-line="27" selection-start-column="228" selection-end-line="27" selection-end-column="233" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Azure Instance.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cloudshell_package/App Templates/Azure Instance.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80577135">
-              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -111,10 +97,60 @@
         <entry file="file://$PROJECT_DIR$/src/media_services/test_cloudshell_media_services.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+              <caret line="118" column="35" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
               <folding>
                 <element signature="e#46#112#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drivermetadata.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cdn_deployer/drivermetadata.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.4193548">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drivermetadata.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redis_deployer/drivermetadata.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.4193548">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cdn_deployer/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/media_services/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/redis_deployer/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.13360325">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,31 +175,31 @@
         <option value="$PROJECT_DIR$/src/requirements.txt" />
         <option value="$PROJECT_DIR$/src/driver.py" />
         <option value="$PROJECT_DIR$/src/drivermetadata.xml" />
-        <option value="$PROJECT_DIR$/src/cdn_deployer/requirements.txt" />
         <option value="$PROJECT_DIR$/src/cdn_deployer/test_cloudshell_azure_redis_cache.py" />
         <option value="$PROJECT_DIR$/src/redis_deployer/test_constants.py" />
         <option value="$PROJECT_DIR$/src/cdn_deployer/test_constants.py" />
         <option value="$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/site-packages/cloudshell/api/cloudshell_api.py" />
         <option value="$PROJECT_DIR$/src/DefaultSandboxSetupForAzureServices/sandbox_scripts/environment/setup/setup_script.py" />
-        <option value="$PROJECT_DIR$/src/cdn_deployer/drivermetadata.xml" />
         <option value="$PROJECT_DIR$/src/buildsrc.txt" />
         <option value="$PROJECT_DIR$/tools/upload_to_quali_server.py" />
-        <option value="$PROJECT_DIR$/src/media_services/drivermetadata.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/cdn_deployer/test_cloudshell_azure_cdn.py" />
         <option value="$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/storage/operations/storage_accounts_operations.py" />
-        <option value="$PROJECT_DIR$/src/cdn_deployer/driver.py" />
-        <option value="$PROJECT_DIR$/src/media_services/requirements.txt" />
         <option value="$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/storage/models/storage_account.py" />
         <option value="$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/site-packages/azure/mgmt/media/models/media_service.py" />
         <option value="$PROJECT_DIR$/tools/buildsrc.py" />
         <option value="$PROJECT_DIR$/src/redis_deployer/requirements.txt" />
-        <option value="$PROJECT_DIR$/src/redis_deployer/drivermetadata.xml" />
         <option value="$PROJECT_DIR$/src/redis_deployer/test_cloudshell_azure_redis_cache.py" />
         <option value="$PROJECT_DIR$/src/media_services/test_cloudshell_media_services.py" />
-        <option value="$PROJECT_DIR$/src/redis_deployer/driver.py" />
-        <option value="$PROJECT_DIR$/src/media_services/driver.py" />
         <option value="$PROJECT_DIR$/cloudshell_package/App Templates/Azure Instance.xml" />
+        <option value="$PROJECT_DIR$/src/media_services/driver.py" />
+        <option value="$PROJECT_DIR$/src/redis_deployer/driver.py" />
+        <option value="$PROJECT_DIR$/src/cdn_deployer/driver.py" />
+        <option value="$PROJECT_DIR$/src/cdn_deployer/drivermetadata.xml" />
+        <option value="$PROJECT_DIR$/src/cdn_deployer/requirements.txt" />
+        <option value="$PROJECT_DIR$/src/redis_deployer/drivermetadata.xml" />
+        <option value="$PROJECT_DIR$/src/media_services/drivermetadata.xml" />
+        <option value="$PROJECT_DIR$/src/media_services/requirements.txt" />
       </list>
     </option>
   </component>
@@ -173,9 +209,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="width" value="1872" />
-    <option name="height" value="1092" />
+    <option name="x" value="57" />
+    <option name="width" value="1870" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -202,6 +238,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -295,6 +332,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cdn_deployer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloudshell-azure-redis-cache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloudshell-azure-redis-cache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="cloudshell_package" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -331,7 +386,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Topologies" />
+              <option name="myItemId" value="Resource Drivers - Python" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,27 +426,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloudshell-azure-redis-cache" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloudshell-azure-redis-cache" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloudshell_package" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App Templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,24 +469,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="upload_to_quali_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cloudshell-azure-redis-cache" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/upload_to_quali_server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Nosetests in test_cloudshell_media_services" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -473,7 +491,29 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Nosetests in TestCloudshellAzureRedisCacheDriver (1)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Nosetest TestCloudshellAzureCdnDeployerDriver.test_deploy_cdn_endpoint" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/cdn_deployer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cloudshell-azure-redis-cache" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/cdn_deployer/test_cloudshell_azure_cdn.py" />
+      <option name="CLASS_NAME" value="TestCloudshellAzureCdnDeployerDriver" />
+      <option name="METHOD_NAME" value="test_deploy_cdn_endpoint" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetest TestCloudshellAzureRedisCacheDriver.test_deploy_redis_cache" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -486,31 +526,31 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/redis_deployer/test_cloudshell_azure_redis_cache.py" />
       <option name="CLASS_NAME" value="TestCloudshellAzureRedisCacheDriver" />
-      <option name="METHOD_NAME" value="" />
+      <option name="METHOD_NAME" value="test_deploy_redis_cache" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Nosetests in test_cloudshell_azure_redis_cache" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Nosetest TestCloudshellAzureMediaServicesDriver.test_media_services" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/redis_deployer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/media_services" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="cloudshell-azure-redis-cache" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/redis_deployer/test_cloudshell_azure_redis_cache.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/media_services/test_cloudshell_media_services.py" />
+      <option name="CLASS_NAME" value="TestCloudshellAzureMediaServicesDriver" />
+      <option name="METHOD_NAME" value="test_media_services" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PARAMS" value="" />
@@ -712,18 +752,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.buildsrc" />
-      <item index="1" class="java.lang.String" itemvalue="Python.upload_to_quali_server" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in test_cloudshell_media_services" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in TestCloudshellAzureRedisCacheDriver (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in test_cloudshell_azure_redis_cache" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in test_cloudshell_media_services" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest TestCloudshellAzureCdnDeployerDriver.test_deploy_cdn_endpoint" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest TestCloudshellAzureRedisCacheDriver.test_deploy_redis_cache" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetest TestCloudshellAzureMediaServicesDriver.test_media_services" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.buildsrc" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in test_cloudshell_media_services" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in test_cloudshell_azure_redis_cache" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in TestCloudshellAzureRedisCacheDriver (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.upload_to_quali_server" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetest TestCloudshellAzureMediaServicesDriver.test_media_services" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest TestCloudshellAzureRedisCacheDriver.test_deploy_redis_cache" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest TestCloudshellAzureCdnDeployerDriver.test_deploy_cdn_endpoint" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in test_cloudshell_media_services" />
       </list>
     </recent_temporary>
   </component>
@@ -741,23 +781,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Nosetests_in_test_cloudshell_azure_redis_cache - 2016.12.07 at 14h 51m 31s.xml">
-      <configuration name="Nosetests in test_cloudshell_azure_redis_cache" configurationId="tests" />
+    <history-entry file="Nosetest_TestCloudshellAzureCdnDeployerDriver_test_deploy_cdn_endpoint - 2016.12.27 at 22h 20m 20s.xml">
+      <configuration name="Nosetest TestCloudshellAzureCdnDeployerDriver.test_deploy_cdn_endpoint" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_test_cloudshell_azure_redis_cache - 2016.12.07 at 16h 08m 45s.xml">
-      <configuration name="Nosetests in test_cloudshell_azure_redis_cache" configurationId="tests" />
+    <history-entry file="Nosetest_TestCloudshellAzureCdnDeployerDriver_test_deploy_cdn_endpoint - 2016.12.27 at 22h 27m 47s.xml">
+      <configuration name="Nosetest TestCloudshellAzureCdnDeployerDriver.test_deploy_cdn_endpoint" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_test_cloudshell_azure_redis_cache - 2016.12.07 at 16h 18m 34s.xml">
-      <configuration name="Nosetests in test_cloudshell_azure_redis_cache" configurationId="tests" />
+    <history-entry file="Nosetest_TestCloudshellAzureCdnDeployerDriver_test_deploy_cdn_endpoint - 2016.12.27 at 22h 29m 42s.xml">
+      <configuration name="Nosetest TestCloudshellAzureCdnDeployerDriver.test_deploy_cdn_endpoint" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_test_cloudshell_azure_redis_cache - 2016.12.07 at 16h 23m 35s.xml">
-      <configuration name="Nosetests in test_cloudshell_azure_redis_cache" configurationId="tests" />
+    <history-entry file="Nosetest_TestCloudshellAzureMediaServicesDriver_test_media_services - 2016.12.28 at 13h 27m 36s.xml">
+      <configuration name="Nosetest TestCloudshellAzureMediaServicesDriver.test_media_services" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_test_cloudshell_azure_redis_cache - 2016.12.07 at 16h 27m 29s.xml">
-      <configuration name="Nosetests in test_cloudshell_azure_redis_cache" configurationId="tests" />
+    <history-entry file="Nosetest_TestCloudshellAzureMediaServicesDriver_test_media_services - 2016.12.28 at 16h 11m 54s.xml">
+      <configuration name="Nosetest TestCloudshellAzureMediaServicesDriver.test_media_services" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_test_cloudshell_azure_redis_cache - 2016.12.07 at 16h 47m 58s.xml">
-      <configuration name="Nosetests in test_cloudshell_azure_redis_cache" configurationId="tests" />
+    <history-entry file="Nosetest_TestCloudshellAzureRedisCacheDriver_test_deploy_redis_cache - 2016.12.28 at 12h 35m 21s.xml">
+      <configuration name="Nosetest TestCloudshellAzureRedisCacheDriver.test_deploy_redis_cache" configurationId="tests" />
     </history-entry>
     <history-entry file="Nosetests_in_test_cloudshell_media_services - 2016.12.07 at 17h 15m 42s.xml">
       <configuration name="Nosetests in test_cloudshell_media_services" configurationId="tests" />
@@ -782,21 +822,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="0" width="1872" height="1092" extended-state="0" />
+    <frame x="57" y="0" width="1870" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3394794" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18487859" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3368092" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20662983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43383947" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32395834" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43482795" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -842,43 +882,102 @@
           <line>13</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/tools/buildsrc.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/src/media_services/driver.py</url>
-          <line>63</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/src/media_services/driver.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="57" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="AttributeError" />
         <watch expression="context" />
       </configuration>
+      <configuration name="PythonConfigurationType">
+        <watch expression="AttributeError" />
+        <watch expression="context" />
+      </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/cdn/operations/endpoints_operations.py">
+    <entry file="file://$PROJECT_DIR$/src/redis_deployer/driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-125.93104">
-          <caret line="170" column="32" selection-start-line="170" selection-start-column="32" selection-end-line="170" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/cdn/models/endpoint_create_parameters.py">
+    <entry file="file://$PROJECT_DIR$/src/redis_deployer/test_cloudshell_azure_redis_cache.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+          <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
+          <folding>
+            <element signature="e#46#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="364" column="46" selection-start-line="364" selection-start-column="46" selection-end-line="364" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media_services/driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media_services/drivermetadata.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloudshell_package/DataModel/datamodel.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media_services/test_cloudshell_media_services.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media_services/test_cloudshell_media_services.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#112#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -889,38 +988,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/msrestazure/azure_operation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1208054">
-          <caret line="528" column="0" selection-start-line="528" selection-start-column="0" selection-end-line="528" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redis_deployer/test_constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/cdn/models/cdn_management_client_enums.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/redis/models/redis_management_client_enums.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/test_constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -938,38 +1009,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/cdn/models/error_response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/cdn/operations/profiles_operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/cdn/cdn_management_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="50" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DefaultSandboxSetupForAzureServices/sandbox_scripts/environment/setup/setup_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.0">
           <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/drivermetadata.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8387096">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -994,15 +1037,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1095" column="33" selection-start-line="1095" selection-start-column="33" selection-end-line="1095" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media_services/drivermetadata.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1290324">
-          <caret line="3" column="87" selection-start-line="3" selection-start-column="87" selection-end-line="3" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,60 +1054,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/resource/resources/resource_management_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media_services/test_constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6851064">
           <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/test_cloudshell_azure_cdn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="53" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
-          <folding>
-            <element signature="e#46#112#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/storage/storage_management_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="42" selection-start-line="121" selection-start-column="42" selection-end-line="121" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/storage/operations/storage_accounts_operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="483" column="47" selection-start-line="483" selection-start-column="47" selection-end-line="483" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#62#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1084,18 +1069,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/storage/models/storage_account_paged.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/msrest/serialization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,21 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="275" column="57" selection-start-line="275" selection-start-column="57" selection-end-line="275" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media_services/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/storage/models/storage_account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="23" selection-start-line="137" selection-start-column="23" selection-end-line="137" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1132,20 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/msrestazure/azure_exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="16" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redis_deployer/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1170,32 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/buildsrc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#14#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redis_deployer/drivermetadata.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.806452">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/azure/mgmt/resource/resources/operations/resource_groups_operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1204,12 +1126,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/media_services/test_constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/site-packages/azure/mgmt/cdn/operations/endpoints_operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.586206">
+          <caret line="205" column="17" selection-start-line="205" selection-start-column="17" selection-end-line="205" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/test_cloudshell_azure_cdn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/test_constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/site-packages/msrestazure/azure_active_directory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="394" column="8" selection-start-line="394" selection-start-column="8" selection-end-line="394" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/site-packages/azure/mgmt/cdn/cdn_management_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="36" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/site-packages/azure/mgmt/cdn/operations/profiles_operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.7586207">
+          <caret line="224" column="14" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/redis_deployer/test_cloudshell_azure_redis_cache.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
           <folding>
             <element signature="e#46#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redis_deployer/test_constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloudshell_package/DataModel/datamodel.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.580645">
+          <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redis_deployer/driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1217,19 +1231,9 @@
     <entry file="file://$PROJECT_DIR$/src/media_services/test_cloudshell_media_services.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <caret line="118" column="35" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
           <folding>
             <element signature="e#46#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redis_deployer/driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1237,25 +1241,65 @@
     <entry file="file://$PROJECT_DIR$/src/media_services/driver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
             <element signature="e#0#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloudshell_package/DataModel/datamodel.xml">
+    <entry file="file://$PROJECT_DIR$/tools/buildsrc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.290322">
-          <caret line="27" column="233" selection-start-line="27" selection-start-column="228" selection-end-line="27" selection-end-column="233" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloudshell_package/App Templates/Azure Instance.xml">
+    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/drivermetadata.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80577135">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state vertical-scroll-proportion="-1.4193548">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media_services/drivermetadata.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4193548">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redis_deployer/drivermetadata.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4193548">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cdn_deployer/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media_services/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redis_deployer/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13360325">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

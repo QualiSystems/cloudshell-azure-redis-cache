@@ -1,4 +1,4 @@
 cloudshell-shell-core>=2.3.0,<2.4.0
 cloudshell-automation-api>=7.1.0,<7.2.0
 azure==2.0.0rc6
-azure-mgmt-cdn
+azure-mgmt-cdn==0.30.2

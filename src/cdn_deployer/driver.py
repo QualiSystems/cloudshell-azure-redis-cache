@@ -4,8 +4,8 @@ from cloudshell.shell.core.driver_context import InitCommandContext, ResourceCom
 from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.resource.resources import ResourceManagementClient
 from azure.mgmt.cdn import CdnManagementClient
-from azure.mgmt.cdn.models import ProfileCreateParameters, Sku, SkuName, EndpointCreateParameters, \
-    QueryStringCachingBehavior, DeepCreatedOrigin, ErrorResponseException
+from azure.mgmt.cdn.models import Profile, Sku, SkuName, Endpoint, \
+    QueryStringCachingBehavior, DeepCreatedOrigin
 from uuid import uuid4
 
 
@@ -52,7 +52,7 @@ class CloudshellAzureCdnDeployerDriver(ResourceDriverInterface):
 
     def _create_endpoint(self, cmc, rc):
         dco = DeepCreatedOrigin(host_name=rc._origin_hostname, http_port=80, https_port=443, name=uuid4())
-        endpoint_properties = EndpointCreateParameters(location=rc.region,
+        endpoint_properties = Endpoint(location=rc.region,
                                                        tags=dict(),
                                                        origin_host_header=rc.origin_host_header,
                                                        origin_path=rc.origin_path,
@@ -67,14 +67,14 @@ class CloudshellAzureCdnDeployerDriver(ResourceDriverInterface):
                                                                                   'application/json',
                                                                                   'application/xml'],
                                                        origins=[dco])
-        result = cmc.endpoints.create(uuid4(), endpoint_properties, rc.profile_name, rc.resource_group)
+        result = cmc.endpoints.create(rc.resource_group, rc.profile_name, uuid4(), endpoint_properties)
         return result
 
     def _create_profile(self, cmc, rc):
-        profile_properties = ProfileCreateParameters(location=rc.region,
+        profile_properties = Profile(location=rc.region,
                                                      sku=Sku(name=rc.sku_name),
                                                      tags={'ReservationId': rc.resource_group})
-        result = cmc.profiles.create(rc.profile_name, profile_properties, rc.resource_group)
+        result = cmc.profiles.create(rc.resource_group, rc.profile_name, profile_properties)
         result.wait()
 
     def _get_cdn_management_client(self, subscription_id, client_id, secret, tenant):
@@ -102,6 +102,8 @@ def get_azure_attributes(context):
     azure_resource_name = context.resource.attributes['Azure Resource']
     azure_resource = api.GetResourceDetails(azure_resource_name)
     azure_attributes = {resattr.Name: resattr.Value for resattr in azure_resource.ResourceAttributes}
+    if 'Azure Secret' in azure_attributes:
+        azure_attributes['Azure Secret'] = api.DecryptPassword(azure_attributes['Azure Secret']).Value
     return azure_attributes
 
 

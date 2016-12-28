@@ -102,6 +102,8 @@ def get_azure_attributes(context, api=None):
     azure_resource_name = context.resource.attributes['Azure Resource']
     azure_resource = api.GetResourceDetails(azure_resource_name)
     azure_attributes = {resattr.Name: resattr.Value for resattr in azure_resource.ResourceAttributes}
+    if 'Azure Secret' in azure_attributes:
+        azure_attributes['Azure Secret'] = api.DecryptPassword(azure_attributes['Azure Secret']).Value
     return azure_attributes
 
 
