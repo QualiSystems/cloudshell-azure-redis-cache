@@ -69,3 +69,5 @@ cloudshell_config.yml
 !/cloudshell_package/Topology Scripts/Default Sandbox Teardown.zip
 !/cloudshell_package/Topology Scripts/Default Sandbox Setup.zip
 /src/media_services/test_constants.py
+!/cloudshell_package/Resource Drivers - Python/Media Service Deployer.zip
+
